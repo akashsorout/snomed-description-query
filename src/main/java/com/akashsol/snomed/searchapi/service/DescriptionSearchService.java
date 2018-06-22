@@ -44,13 +44,23 @@ public class DescriptionSearchService {
 		
 		Arrays.asList(term.split(" ")).forEach(sterm -> 	
 		
-			bqb.must(QueryBuilders.queryStringQuery(sterm.trim()+"*").field("term").analyzeWildcard(true)
-			.defaultOperator(org.elasticsearch.index.query.QueryStringQueryBuilder.Operator.AND))
+		//	bqb.must(QueryBuilders.queryStringQuery(sterm.trim()+"*").field("term").analyzeWildcard(true)
+	//		.defaultOperator(org.elasticsearch.index.query.QueryStringQueryBuilder.Operator.AND))
+		
+		//bqb.must(QueryBuilders.matchPhraseQuery("term", sterm))
+		
+		bqb.must(QueryBuilders.matchPhrasePrefixQuery("term", sterm) )
+		.should(QueryBuilders.matchQuery("term", sterm))
+		
+//		bqb.must(
+//				QueryBuilders.functionScoreQuery(QueryBuilders.matchPhrasePrefixQuery("term", sterm))
+//				.add(ScoreFunctionBuilders.scriptFunction("t=doc['term'].value;return t.length;")) 
+//				)
 			
-				);
+				) ;
 		
 		
-					NativeSearchQueryBuilder qBuild =new NativeSearchQueryBuilder().withQuery(bqb);
+		NativeSearchQueryBuilder qBuild =new NativeSearchQueryBuilder().withQuery(bqb);
 			
 					if(typeId!=null)		
 						qBuild.withFilter(QueryBuilders.termQuery("typeId", typeId));
@@ -101,7 +111,13 @@ public class DescriptionSearchService {
 				new Description("3572010", "20020131", 1, "900000000000207008", "1475003", "en", "900000000000013009", "Fever blister", "900000000000020002"),
 				new Description("44007011", "20020131", 1, "900000000000207008", "26275000", "en", "900000000000013009", "Fever due to Leptospira autumnalis", "900000000000020002"),
 				new Description("514391014", "20020131", 1, "900000000000207008", "135882008", "en", "900000000000003001", "Feverish cold (finding)", "900000000000020002"),
-				new Description("514392019", "20020131", 1, "900000000000207008", "135883003", "en", "900000000000003001", "Cough with fever (finding)", "900000000000020002")
+				new Description("514392019", "20020131", 1, "900000000000207008", "135883003", "en", "900000000000003001", "Cough with fever (finding)", "900000000000020002"),
+				
+				new Description("1480803010", "20030131", 1, "900000000000207008", "386661006", "en", "900000000000013009", "Fever", "900000000000020002"),
+				
+				new Description("139573015", "20020131", 1, "900000000000207008", "84162001", "en", "900000000000013009", "Cold", "900000000000017005")
+				
+				
 				);
 		
 		

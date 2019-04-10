@@ -7,8 +7,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.RestTemplate;
 
-import com.akashsol.snomed.searchapi.model.Description;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import in.co.bytehub.snomed.searchapi.model.Description;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

@@ -1,4 +1,4 @@
-package com.akashsol.snomed.searchapi.commons;
+package in.co.bytehub.snomed.searchapi.commons;
 
 import java.util.HashMap;
 

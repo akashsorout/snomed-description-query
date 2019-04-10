@@ -1,4 +1,4 @@
-package com.akashsol.snomed.searchapi;
+package in.co.bytehub.snomed.searchapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

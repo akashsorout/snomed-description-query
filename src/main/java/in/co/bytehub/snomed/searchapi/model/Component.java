@@ -1,4 +1,4 @@
-package com.akashsol.snomed.searchapi.model;
+package in.co.bytehub.snomed.searchapi.model;
 
 public abstract class Component {
 

@@ -1,4 +1,4 @@
-package com.akashsol.snomed.searchapi.controller;
+package in.co.bytehub.snomed.searchapi.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,11 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.akashsol.snomed.searchapi.commons.EnumTypeId;
-import com.akashsol.snomed.searchapi.model.Description;
-import com.akashsol.snomed.searchapi.service.DescriptionSearchService;
-import com.akashsol.snomed.searchapi.util.ResponseModel;
-
+import in.co.bytehub.snomed.searchapi.commons.EnumTypeId;
+import in.co.bytehub.snomed.searchapi.model.Description;
+import in.co.bytehub.snomed.searchapi.service.DescriptionSearchService;
+import in.co.bytehub.snomed.searchapi.util.ResponseModel;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;

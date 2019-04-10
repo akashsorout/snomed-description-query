@@ -1,9 +1,9 @@
-package com.akashsol.snomed.searchapi.repo;
+package in.co.bytehub.snomed.searchapi.repo;
 
 import org.springframework.data.elasticsearch.repository.ElasticsearchCrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.akashsol.snomed.searchapi.model.Description;
+import in.co.bytehub.snomed.searchapi.model.Description;
 
 
 @Repository

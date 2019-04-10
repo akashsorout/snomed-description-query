@@ -1,4 +1,4 @@
-package com.akashsol.snomed.searchapi.util;
+package in.co.bytehub.snomed.searchapi.util;
 
 public class SearchResultModel<T> {
 

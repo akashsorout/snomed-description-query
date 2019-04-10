@@ -1,4 +1,4 @@
-package com.akashsol.snomed.searchapi.service;
+package in.co.bytehub.snomed.searchapi.service;
 
 import java.text.ParseException;
 import java.util.Arrays;
@@ -18,11 +18,12 @@ import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilde
 import org.springframework.data.elasticsearch.core.query.SearchQuery;
 import org.springframework.stereotype.Service;
 
-import com.akashsol.snomed.searchapi.model.Description;
-import com.akashsol.snomed.searchapi.repo.DescriptionRepo;
-import com.akashsol.snomed.searchapi.util.ResponseModel;
-import com.akashsol.snomed.searchapi.util.SearchResultModel;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import in.co.bytehub.snomed.searchapi.model.Description;
+import in.co.bytehub.snomed.searchapi.repo.DescriptionRepo;
+import in.co.bytehub.snomed.searchapi.util.ResponseModel;
+import in.co.bytehub.snomed.searchapi.util.SearchResultModel;
 
 
 

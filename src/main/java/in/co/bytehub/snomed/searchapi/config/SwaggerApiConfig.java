@@ -1,4 +1,4 @@
-package com.akashsol.snomed.searchapi.config;
+package in.co.bytehub.snomed.searchapi.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,7 +21,7 @@ public class SwaggerApiConfig {
 	
 		return new Docket(DocumentationType.SWAGGER_2)
 						.select()
-						.apis(RequestHandlerSelectors.basePackage("com.akashsol.snomed.searchapi.controller"))
+						.apis(RequestHandlerSelectors.basePackage("in.co.bytehub.snomed.searchapi.controller"))
 						.paths(PathSelectors.any())
 						.build()
 						.apiInfo(metaData());

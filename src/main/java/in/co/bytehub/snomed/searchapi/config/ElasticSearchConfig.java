@@ -1,4 +1,4 @@
-package com.akashsol.snomed.searchapi.config;
+package in.co.bytehub.snomed.searchapi.config;
 
 import org.elasticsearch.node.NodeBuilder;
 import org.springframework.context.annotation.Bean;
